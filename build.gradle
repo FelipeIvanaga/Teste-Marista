@@ -8,6 +8,14 @@ group = 'grupomarista.org.br'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
+jar {
+	manifest {
+		attributes(
+				'Main-Class': "grupomarista.org.br.Schools.SchoolsApplication"
+		)
+	}
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
