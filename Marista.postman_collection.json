@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "2138f53e-cf92-4058-9c91-d312275da60a",
+		"name": "Marista",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list schools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://teste-marista-production.up.railway.app/school?search=name~xavier&page=0&size=12",
+					"protocol": "https",
+					"host": [
+						"teste-marista-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"school"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "name~xavier"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find school",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://teste-marista-production.up.railway.app/school/64d33524-be3d-4c95-99dc-dc830aaeb61c",
+					"protocol": "https",
+					"host": [
+						"teste-marista-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"school",
+						"64d33524-be3d-4c95-99dc-dc830aaeb61c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create school",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"inep\": 13082175,\n  \"name\": \"Instituto Xavier\",\n  \"address\": \"Guacá, Av.\",\n  \"number\": \"158/160\",\n  \"status\": \"active\",\n  \"levels\": [\n    {\n      \"name\": \"Ensino Infantil\",\n      \"code\": \"EI001\",\n      \"status\": \"active\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://teste-marista-production.up.railway.app/school",
+					"protocol": "https",
+					"host": [
+						"teste-marista-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"school"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update school",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"inep\": 13082175,\n  \"name\": \"Instituto Xavier\",\n  \"address\": \"Guacá, Av.\",\n  \"number\": \"190\",\n  \"status\": \"active\",\n  \"levels\": [\n    {\n      \"name\": \"Ensino Infantil\",\n      \"code\": \"EI001\",\n      \"status\": \"active\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://teste-marista-production.up.railway.app/school/64d33524-be3d-4c95-99dc-dc830aaeb61c",
+					"protocol": "https",
+					"host": [
+						"teste-marista-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"school",
+						"64d33524-be3d-4c95-99dc-dc830aaeb61c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete school",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://teste-marista-production.up.railway.app/school/bce5e70a-d197-453d-bdf0-4c1de00af402?softDelete=true",
+					"protocol": "https",
+					"host": [
+						"teste-marista-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"school",
+						"bce5e70a-d197-453d-bdf0-4c1de00af402"
+					],
+					"query": [
+						{
+							"key": "softDelete",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
