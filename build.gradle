@@ -13,16 +13,20 @@ java {
 	}
 }
 
-//jar {
-//	manifest {
-//		attributes(
-//				'Main-Class': 'grupomarista.org.br.Schools.SchoolsApplication'
-//		)
-//	}
-//}
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'grupomarista.org.br.Schools.SchoolsApplication'
+		)
+	}
+}
 
-springBoot {
-	mainClass = 'grupomarista.org.br.Schools.SchoolsApplication'
+jar {
+	enabled = false
+}
+
+bootJar {
+	enabled = true
 }
 
 configurations {
